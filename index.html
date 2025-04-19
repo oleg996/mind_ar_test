@@ -8,12 +8,13 @@
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
     embedded
-    arjs="trackingMethod: best; sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+    arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true; detectionMode: mono_and_matrix;"
     gesture-detector
     >
     <a-marker
-      type="barcode"
-      value = "7"
+      type="pattern"
+      preset="custom"
+      url="pattern-ar.patt"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
