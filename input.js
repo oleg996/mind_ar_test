@@ -43,9 +43,10 @@ AFRAME.registerComponent("input", {
   },
 
   handleRotation: function (event) {
-    
+    console.log("move");
 
     if (this.isVisible) {
+
       this.el.object3D.position.y +=
         event.detail.positionChange.x * this.data.rotationFactor;
       this.el.object3D.position.x +=
