@@ -17,10 +17,12 @@ AFRAME.registerComponent("input-handler", {
     this.scaleFactor = 1;
 
     this.el.sceneEl.addEventListener("markerFound", (e) => {
+      console.log("ON");
       this.isVisible = true;
     });
 
     this.el.sceneEl.addEventListener("markerLost", (e) => {
+      console.log("OFF");
       this.isVisible = false;
     });
   },
@@ -41,7 +43,7 @@ AFRAME.registerComponent("input-handler", {
   },
 
   handleRotation: function (event) {
-    console.log("click");
+    
 
     if (this.isVisible) {
       this.el.object3D.rotation.y +=
