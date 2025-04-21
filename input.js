@@ -46,7 +46,7 @@ AFRAME.registerComponent("input", {
   },
 
   handleRotation: function (event) {
-    console.log( modelViewer.object3D.rotation);
+    console.log( this.modelViewer.object3D.rotation);
 
     if (this.isVisible) {
 
