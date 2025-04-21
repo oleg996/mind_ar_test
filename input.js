@@ -9,6 +9,9 @@ AFRAME.registerComponent("input", {
   },
 
   init: function () {
+    this.modelViewer = document.querySelector("model-viewer");
+
+
     this.handleScale = this.handleScale.bind(this);
     this.handleRotation = this.handleRotation.bind(this);
 
@@ -43,7 +46,7 @@ AFRAME.registerComponent("input", {
   },
 
   handleRotation: function (event) {
-    console.log( this.el.object3D.rotation);
+    console.log( modelViewer.object3D.rotation);
 
     if (this.isVisible) {
 
