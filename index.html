@@ -65,6 +65,21 @@
       aspect-ratio: auto; /* Remove fixed aspect ratio */
     }
   </style>
+  <script type="module">
+    //  const modelViewer = document.querySelector("model-viewer");
+      const models = ["model.glb", "apple.glb"];
+      let i = 0;
+
+      window.switchSrc = (element, name) => {
+        if (name === "add" && i < models.length - 1) {
+          i++;
+        }
+        if (name === "sub" && i > 0) {
+          i--;
+        }
+        //modelViewer.src = models[i];
+      };
+    </script>
 
 
 
@@ -108,22 +123,7 @@
 
       <a-entity camera></a-entity>
     </a-scene>
-    <script type="module">
-    //  const modelViewer = document.querySelector("model-viewer");
-      const models = ["model.glb", "apple.glb"];
-      let i = 0;
-
-      window.switchSrc = (element, name) => {
-        if (name === "add" && i < models.length - 1) {
-          i++;
-        }
-        if (name === "sub" && i > 0) {
-          i--;
-        }
-        //modelViewer.src = models[i];
-      };
-    </script>
-
+    
 
 
   </body>
