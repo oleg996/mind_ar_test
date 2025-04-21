@@ -58,7 +58,7 @@
       let i = 0;
       
       function switchSrc(element, name){
-        console.log(i);
+        
 
         if (name === "add" && i < models.length - 1) {
           i++;
@@ -66,7 +66,7 @@
         if (name === "sub" && i > 0) {
           i--;
         }
-        
+        console.log(i);
         //modelViewer.src = models[i];
       };
     </script>
@@ -77,9 +77,9 @@
 
   <body>
     <div class="slider" style="align-items: center; width: 100%; z-index: 100;">
-      <button class="slide" onclick="console.log('click')" style="background-image:url('L.png'); background-color: none; pointer-events: auto; z-index: 100;">
+      <button class="slide" onclick="switchSrc(this, 'sub')" style="background-image:url('L.png'); background-color: none; pointer-events: auto; z-index: 100;">
       </button>
-      <button class="slide" onclick="console.log('click')"" style="background-image:url('R.png'); background-color: none; pointer-events: auto; z-index: 100;">
+      <button class="slide" onclick="switchSrc(this, 'add')"" style="background-image:url('R.png'); background-color: none; pointer-events: auto; z-index: 100;">
       </button>
     </div>
 
