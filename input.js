@@ -9,7 +9,7 @@ AFRAME.registerComponent("input", {
   },
 
   init: function () {
-    this.modelViewer = document.querySelector("model-viewer");
+    this.modelViewer = document.querySelector("a-marker");
 
 
     this.handleScale = this.handleScale.bind(this);
