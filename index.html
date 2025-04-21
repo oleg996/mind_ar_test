@@ -9,7 +9,7 @@
       embedded
       renderer="logarithmicDepthBuffer: true;"
       vr-mode-ui="enabled: false"
-      gesture-detector
+      detector
       id="scene"
     >
       <a-marker 
@@ -29,7 +29,6 @@
           scale="1 1 1"
           gltf-model="modelar.glb"
           class="clickable"
-          gesture-handler
           input="minScale: 0.25; maxScale: 10"
 
         ></a-entity>
