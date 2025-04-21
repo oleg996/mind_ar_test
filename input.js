@@ -45,13 +45,13 @@ AFRAME.registerComponent("input", {
   handleRotation: function (event) {
     console.log("move");
 
-    // if (this.isVisible) {
+    if (this.isVisible) {
 
-    //   this.el.object3D.position.y +=
-    //     event.detail.positionChange.x * this.data.rotationFactor;
-    //   this.el.object3D.position.x +=
-    //     event.detail.positionChange.y * this.data.rotationFactor;
-    // }
+      this.el.object3D.position.y +=
+        event.detail.positionChange.x * this.data.rotationFactor;
+      this.el.object3D.position.x +=
+        event.detail.positionChange.y * this.data.rotationFactor;
+    }
   },
 
   handleScale: function (event) {
