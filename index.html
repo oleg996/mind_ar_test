@@ -51,7 +51,7 @@
       const models = ["model.glb", "apple.glb"];
       let i = 0;
       
-      window.switchSrc = (element, name) => {
+      function switchSrc(element, name){
         console.log(i);
 
         if (name === "add" && i < models.length - 1) {
