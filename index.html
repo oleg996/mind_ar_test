@@ -20,12 +20,6 @@
       text-align: center;
     }
 
-    model-viewer {
-      /* Remove fixed height and width to allow for more flexible scaling */
-      width: 100%; /* Ensure it doesn't exceed screen width */
-      height: 100%; /* Allow some space for the slider */
-    }
-
     .slider {
       width: 100%;
       height: 10%;
@@ -50,19 +44,6 @@
       display: flex;
       width: 30%; /* Adjust width as needed */
       height: 100%;
-    }
-
-    button[slot="ar-button"] {
-      background-color: white;
-      border-radius: 10px;
-      border: none;
-      position: absolute;
-      top: 40px;
-      right: 20px; /* Adjust right margin */
-      width: auto; /* Adjust width to content */
-      padding: 10px 15px; /* Add some padding */
-      font-size: 4vw; /* Adjust font size for mobile */
-      aspect-ratio: auto; /* Remove fixed aspect ratio */
     }
   </style>
   <script type="module">
