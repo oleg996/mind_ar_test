@@ -46,14 +46,16 @@ AFRAME.registerComponent("input", {
   },
 
   handleRotation: function (event) {
-    console.log( this.modelViewer.object3D.rotation);
+
+    var x_cos = Math.cos( this.modelViewer.object3D.rotation.z);
+    var y_sin = Math.sin( this.modelViewer.object3D.rotation.z);
 
     if (this.isVisible) {
 
       this.el.object3D.position.x +=
-        event.detail.positionChange.x * this.data.rotationFactor;
+        (event.detail.positionChange.x*x_cos+event.detail.positionChange.y*y_sin) * this.data.rotationFactor;
       this.el.object3D.position.z +=
-        event.detail.positionChange.y * this.data.rotationFactor;
+      (event.detail.positionChange.y*x_cos+event.detail.positionChange.x*y_sin) * this.data.rotationFactor;
     }
   },
 
