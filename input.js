@@ -49,7 +49,7 @@ AFRAME.registerComponent("input", {
 
       this.el.object3D.position.y +=
         event.detail.positionChange.x * this.data.rotationFactor;
-      this.el.object3D.position.x +=
+      this.el.object3D.position.z +=
         event.detail.positionChange.y * this.data.rotationFactor;
     }
   },
