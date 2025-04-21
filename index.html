@@ -70,14 +70,6 @@
 
 
   <body>
-    <a-scene 
-    arjs="trackingMethod: best; sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
-      embedded
-      renderer="logarithmicDepthBuffer: true;"
-      vr-mode-ui="enabled: false"
-      
-      id="scene"
-    >
     <div class="slider" style="align-items: center; width: 100%;">
       <button class="slide" onclick="switchSrc(this, 'sub')" style="background-image:url('L.png'); background-color: transparent;">
       </button>
@@ -86,9 +78,23 @@
     </div>
 
 
+    <a-scene 
+    arjs="trackingMethod: best; sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
+      embedded
+      renderer="logarithmicDepthBuffer: true;"
+      vr-mode-ui="enabled: false"
+      detector
+      id="scene"
+    >
+      
+
+
       <a-marker 
       type="pattern" 
       url="pattern-ar.patt"
+      raycaster="objects: .clickable"
+      emitevents="true"
+      cursor="fuse: false; rayOrigin: mouse;"
       id="markerA"
       >
         <a-entity
