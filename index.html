@@ -47,18 +47,20 @@
     }
   </style>
   <script type="module">
-    //  const modelViewer = document.querySelector("model-viewer");
+      const modelViewer = document.querySelector("a-entity");
       const models = ["model.glb", "apple.glb"];
       let i = 0;
       
       window.switchSrc = (element, name) => {
+        console.log(i);
+
         if (name === "add" && i < models.length - 1) {
           i++;
         }
         if (name === "sub" && i > 0) {
           i--;
         }
-        console.log(i);
+        
         //modelViewer.src = models[i];
       };
     </script>
@@ -93,7 +95,7 @@
 
         ></a-entity>
       </a-marker>
-      <div class="slider">
+      <div class="slider" style="align-items: center;">
         <button class="slide" onclick="switchSrc(this, 'sub')" style="background-image:url('L.png'); background-color: transparent;">
         </button>
         <button class="slide" onclick="switchSrc(this, 'add')" style="background-image:url('R.png'); background-color: transparent;">
