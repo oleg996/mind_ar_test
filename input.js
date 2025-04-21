@@ -1,6 +1,6 @@
 /* global AFRAME, THREE */
 
-AFRAME.registerComponent("input-handler", {
+AFRAME.registerComponent("input", {
   schema: {
     enabled: { default: true },
     rotationFactor: { default: 5 },
