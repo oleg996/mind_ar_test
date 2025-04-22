@@ -54,8 +54,7 @@
   </style>
   <script type="module">
       const modelViewer = document.querySelector("a-entity");
-      const models = ["model.glb", "apple.glb"];
-      const sizes = ["10 10 10", "1 1 1"];
+      const models = ["modelar.glb", "apple.glb"];
       let i = 0;
       
       window.switchSrc = (element, name) =>{
@@ -69,7 +68,6 @@
         }
         console.log(i);
         modelViewer.setAttribute("gltf-model",models[i]);
-        modelViewer.setAttribute("size",sizes[i]);
       };
     </script>
 
@@ -107,11 +105,11 @@
       id="markerA"
       >
         <a-entity
+          class="chair"
           position="0 0 0"
           gltf-model="modelar.glb"
           class="clickable"
           input="minScale: 0.25; maxScale: 10"
-          visible = "false"
 
         ></a-entity>
       </a-marker>
