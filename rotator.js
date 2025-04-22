@@ -1,6 +1,11 @@
 AFRAME.registerComponent("rotator", {
-    update: function () {
-        console.log("H");
+
+    init: function(){
+        var intervalId = window.setInterval(function(){
+            console.log("H");
+          }, 30);
+
+
     }
 
 
