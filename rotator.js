@@ -1,9 +1,9 @@
 AFRAME.registerComponent("rotator", {
 
     init: function(){
-        this.el.object3D.rotation.z += 1;
+        var model = this.el.object3D.rotation;
         var intervalId = window.setInterval(function(){
-             
+             model.z =+ 0.1;
              
           }, 30);
 
