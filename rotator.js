@@ -1,4 +1,4 @@
-AFRAME.registerComponent("rotaror", {
+AFRAME.registerComponent("rotator", {
     update: function () {
         console.log("H");
     }
